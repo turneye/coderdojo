@@ -31,6 +31,7 @@ Path         | Explanation
 `./app/index.html` | The init page.
 `./www/css/` | Other css styles like **[Animate.css](https://daneden.github.io/animate.css/)**, etc.
 `./www/lib` | Download scripts using bower.
+`ionic lib update` | Update Ionic library files
  	 
 #Using bower to download libraries (npm preen included)
 
