@@ -34,8 +34,8 @@ Path         | Explanation
  	 
 #Using bower to download libraries (npm preen included)
 
-1. Download the script. Eg: `bower install ionic-datepicker --save`
-2. Add the path of the files that you will use in `bower.json` from `www/lib`. Eg:
+* Download the script. Eg: `bower install ionic-datepicker --save`
+* Add the path of the files that you will use in `bower.json` from `www/lib`. Eg:
 ```
 "preen": {
 	//... More libraries
@@ -45,8 +45,8 @@ Path         | Explanation
 	]
 }
 ```
-3. Run gulp in the CLI. Eg: `gulp` or `gulp lib`
-4. That's all, folks!!
+* Run gulp in the CLI. Eg: `gulp` or `gulp lib`
+* That's all, folks!!
 
 #Ionic commands
 
