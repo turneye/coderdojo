@@ -31,7 +31,6 @@ Path         | Explanation
 `./app/index.html` | The init page.
 `./www/css/` | Other css styles like **[Animate.css](https://daneden.github.io/animate.css/)**, etc.
 `./www/lib` | Download scripts using bower.
-`ionic lib update` | Update Ionic library files
  	 
 #Using bower to download libraries (npm preen included)
 
@@ -57,6 +56,7 @@ Command         | Action
 `ionic upload`  | Upload your app to Ionic repository and debug remotely (Your clients) using the useful **[Ionic View App](http://view.ionic.io/)** 
 `ionic serve`   | Test on the browser
 `ionic serve --lab` | Test on the browser iOS and Android version 
+`ionic lib update`  | Update Ionic library files
 
 #Cordova commands
 
