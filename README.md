@@ -48,6 +48,12 @@ Path         | Explanation
 * Run gulp in the CLI. Eg: `gulp` or `gulp lib`
 * That's all, folks!!
 
+#NPM commands
+Command | Action
+------- | ------
+`npm i ionic cordova bower -g` | Install Ionic, Cordova and Bower packages globally 
+`npm cache clean` | Remove the cache to force update the packages. Useful to solve npm issues using the CLI.
+
 #Ionic commands
 
 Command         | Action

@@ -26,26 +26,26 @@
           animation: fadeInLeft 1s; }
 
 .homeView .center-content {
-  background: linear-gradient(226deg, #dddddd, #313131, #1c1c1c, #d61c1c);
-  background-size: 800% 800%;
+  background: linear-gradient(135deg, #ff0000, #ec0000, #ff7400, #f2d000, #ffdb00);
+  background-size: 1000% 1000%;
   -webkit-animation: background 26s ease infinite;
           animation: background 26s ease infinite; }
 
 @-webkit-keyframes background {
   0% {
-    background-position: 0% 88%; }
+    background-position: 1% 0%; }
   50% {
-    background-position: 100% 13%; }
+    background-position: 99% 100%; }
   100% {
-    background-position: 0% 88%; } }
+    background-position: 1% 0%; } }
 
 @keyframes background {
   0% {
-    background-position: 0% 88%; }
+    background-position: 1% 0%; }
   50% {
-    background-position: 100% 13%; }
+    background-position: 99% 100%; }
   100% {
-    background-position: 0% 88%; } }
+    background-position: 1% 0%; } }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
   display: none !important; }
