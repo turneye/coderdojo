@@ -26,7 +26,7 @@
           animation: fadeInLeft 1s; }
 
 .homeView .center-content {
-  background: linear-gradient(135deg, #ff0000, #ec0000, #ff7400, #f2d000, #ffdb00);
+  background: linear-gradient(145deg, #D63E3D, #5D4141, #906565, #DDDDDD);
   background-size: 1000% 1000%;
   -webkit-animation: background 26s ease infinite;
           animation: background 26s ease infinite; }

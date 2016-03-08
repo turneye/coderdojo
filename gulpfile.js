@@ -17,16 +17,16 @@ var clean = require('gulp-clean');
 var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
-  sass: ['./scss/**/*.scss'],
-  index: './app/index.html',
-  scripts: ['./app/js/app.js', './app/js/**/*.js'],
-  styles: './app/scss/*.scss',
-  templates: './app/templates/**/*.html',
-	images: './app/img/**/*',
-  lib: './www/lib/**/*',
-	//Destination folders
-	destImages: './www/img/',
-	destTemplates: './www/templates/'
+  sass: ['scss/**/*.scss'],
+  index: 'app/index.html',
+  scripts: ['app/js/app.js', 'app/js/**/*.js'],
+  styles: 'app/scss/*.scss',
+  templates: 'app/templates/**/*.html',
+  images: 'app/img/**/*',
+  lib: 'www/lib/**/*',
+  //Destination folders
+  destImages: './www/img/',
+  destTemplates: './www/templates/'
 };
 
 gulp.task('default', ['sass', 'index', 'scripts', 'styles', 'templates', 'images', 'lib']);
@@ -72,8 +72,8 @@ gulp.task('styles', function () {
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./www/css/'))
 		.pipe(rename({suffix: '.min'}))
-    .pipe(minifyCss())
-    .pipe(gulp.dest('./www/css/'))
+        .pipe(minifyCss())
+        .pipe(gulp.dest('./www/css/'))
 		.pipe(notify({ message: 'Styles builded' }));
 });
 
@@ -118,7 +118,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.styles, ['styles']);
   gulp.watch(paths.templates, ['templates']);
-	gulp.watch(paths.images, ['images']);
+  gulp.watch(paths.images, ['images']);
   gulp.watch(paths.lib, ['lib']);
 });
 
