@@ -64,9 +64,22 @@ $ionicPopup.alert({
 });
 ```
 
-#Use SQLite databases on Android, iOS and Windows
-This template include an example, you can test in the browser using Google Chrome or in your Device.
+#SQLite databases on Android, iOS and Windows (Using **[cordova-sqlite-ext](https://github.com/litehelpers/cordova-sqlite-ext)** plugin)
+This template include an example **(pre-populated database)**, you can test in the **browser** using **Google Chrome** or in your **Device**.
+
 ![Cordova SQLite](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/sqlite.png?raw=true)
+
+* Debug in the browser: Test using the `./app/js/queries.js` file to create your queries **(Drop tables, create tables, insert data, etc)**.
+* Debug in the device: Test using the `./www/pre.db` file, you can edit the database using **[DB Browser for SQLite](http://sqlitebrowser.org/)**
+
+###**Note**: If you don't want to use SQLite, you must perform the following steps:
+1. Remove `./www/pre.db` file.
+2. Remove `./app/js/queries.js` file.
+3. Remove `./app/js/services/sqlite.js` file.
+4. Remove the following line from `./app/js/app.js` file:
+> $sqliteService.preloadDataBase(true);
+
+
 
 #npm commands
 Command | Action
