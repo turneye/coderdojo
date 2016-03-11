@@ -76,11 +76,11 @@ This template include an example **(pre-populated database)**, you can test in t
 1. Remove **`./www/pre.db`** file.
 2. Remove **`./app/js/queries.js`** file.
 3. Remove **`./app/js/services/sqlite.js`** file.
-4. Remove the following line from **`./app/js/app.js`** file:
+4. Uninstall the plugin using the CLI: **`ionic plugin rm cordova-sqlite-ext --save`**
+5. Remove the following line from **`./app/js/app.js`** file:
 ```
 $sqliteService.preloadDataBase(true);
 ```
-5. Uninstall the plugin using the CLI: **`ionic plugin rm cordova-sqlite-ext --save`**
 
 #npm commands
 Command | Action
