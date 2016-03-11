@@ -36,7 +36,7 @@ Path         | Explanation
 
 * Download the script. Eg: `bower install ionic-datepicker --save`
 * Add the path of the files that you will use in `bower.json` from `www/lib`. Eg:
-```
+```javascript
 "preen": {
 	//... More libraries
 	"ionic-datepicker": [
@@ -51,12 +51,12 @@ Path         | Explanation
 #Animate elements using **[Animate.css](https://daneden.github.io/animate.css/)**
 
 * Do you want to animate Modals? This template have an example. More examples **[here](https://github.com/kevincobain2000/ionic-animated-modal)**
-```
+```javascript
 //Using the Modals service in this template
 Modals.openModal($scope, 'templates/modals/users.html', 'animated rotateInDownLeft');
 ```
 * Do you want to animate Popups and other elements? See an example:
-```
+```javascript
 $ionicPopup.alert({
 	title: 'Hello World',
 	template: 'This is the best template to start with Ionic Framework!',
@@ -78,7 +78,7 @@ This template include an example **(pre-populated database)**, you can test in t
 3. Remove **`./app/js/services/sqlite.js`** file.
 4. Uninstall the plugin using the CLI: **`ionic plugin rm cordova-sqlite-ext --save`**
 5. Remove the following line from **`./app/js/app.js`** file:
-```
+```javascript
 $sqliteService.preloadDataBase(true);
 ```
 
