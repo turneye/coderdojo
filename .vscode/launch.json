@@ -3,6 +3,7 @@
 	"configurations": [
 		{
 			"name": "Run Android on device",
+			"cwd": "${cwd}",
 			"type": "cordova",
 			"request": "launch",
 			"platform": "android",
@@ -12,6 +13,7 @@
 		},
 		{
 			"name": "Run iOS on device",
+			"cwd": "${cwd}",
 			"type": "cordova",
 			"request": "launch",
 			"platform": "ios",
@@ -21,6 +23,7 @@
 		},
 		{
 			"name": "Attach to running android on device",
+			"cwd": "${cwd}",
 			"type": "cordova",
 			"request": "attach",
 			"platform": "android",
@@ -30,6 +33,7 @@
 		},
 		{
 			"name": "Attach to running iOS on device",
+			"cwd": "${cwd}",
 			"type": "cordova",
 			"request": "attach",
 			"platform": "ios",
@@ -39,6 +43,7 @@
 		},
 		{
 			"name": "Run Android on emulator",
+			"cwd": "${cwd}",
 			"type": "cordova",
 			"request": "launch",
 			"platform": "android",
@@ -48,6 +53,7 @@
 		},
 		{
 			"name": "Run iOS on simulator",
+			"cwd": "${cwd}",
 			"type": "cordova",
 			"request": "launch",
 			"platform": "ios",
@@ -57,6 +63,7 @@
 		},
 		{
 			"name": "Attach to running android on emulator",
+			"cwd": "${cwd}",
 			"type": "cordova",
 			"request": "attach",
 			"platform": "android",
@@ -66,6 +73,7 @@
 		},
 		{
 			"name": "Attach to running iOS on simulator",
+			"cwd": "${cwd}",
 			"type": "cordova",
 			"request": "attach",
 			"platform": "ios",

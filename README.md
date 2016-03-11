@@ -57,12 +57,16 @@ Modals.openModal($scope, 'templates/modals/users.html', 'animated rotateInDownLe
 ```
 * Do you want to animate Popups and other elements? See an example:
 ```
- $ionicPopup.alert({
+$ionicPopup.alert({
 	title: 'Hello World',
 	template: 'This is the best template to start with Ionic Framework!',
 	cssClass: 'animated bounceInDown'
 });
 ```
+
+#Use SQLite databases on Android,iOS and Windows
+This template include an example, you can test in the browser using Google Chrome or in your Device.
+
 
 #npm commands
 Command | Action
