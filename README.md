@@ -103,6 +103,14 @@ Name            | Description
 **[GapDebug](https://www.genuitec.com/products/gapdebug/)** | Only debug in the device
 **[GenyMotion](https://www.genymotion.com/)** | Better Android Emulation
 
+#Visual Studio Code commands and shortcuts
+Command/Shortcut        | Action
+--------------- | --------------
+`code .` | Open the editor
+`F1` | Open the `Command Palette`
+`Ctrl + Shift + N` | Open other Visual Studio Code instance
+`Ctrl + }` | Toogle comment code
+
 #Sign to Android (Commands)
 
 1. `cordova build --release android`
