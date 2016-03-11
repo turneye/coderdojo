@@ -80,7 +80,7 @@ This template include an example **(pre-populated database)**, you can test in t
 ```
 $sqliteService.preloadDataBase(true);
 ```
-
+5. Uninstall the plugin using the CLI: **`ionic plugin rm cordova-sqlite-ext --save`**
 
 #npm commands
 Command | Action
