@@ -64,9 +64,9 @@ $ionicPopup.alert({
 });
 ```
 
-#Use SQLite databases on Android,iOS and Windows
+#Use SQLite databases on Android, iOS and Windows
 This template include an example, you can test in the browser using Google Chrome or in your Device.
-
+![Cordova SQLite](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/sqlite.png?raw=true)
 
 #npm commands
 Command | Action
