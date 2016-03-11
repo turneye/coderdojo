@@ -13,7 +13,7 @@
 
 #Instructions
 
-1. Donwload this template.
+1. Download this template.
 2. Execute the command `npm install`
 3. Run Ionic: 
    - `ionic serve` to test on the browser **(Gulp is running)**.
