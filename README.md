@@ -6,7 +6,7 @@
 
 > Are you a noob? Use this template.
 
-> Are you a master? Shut up! and use this template... the code only is accepted (pull request).
+> Are you a master? Shut up and use this template! Talk is cheap, show me the code (Pull Request).
 
 <div style="text-align:center"><img src ="https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/reinventing.the.wheel.jpg?raw=true" /></div>
 
@@ -48,10 +48,26 @@ Path         | Explanation
 * Run gulp in the CLI. Eg: `gulp` or `gulp lib`
 * That's all, folks!!
 
-#NPM commands
+#Animate elements using **[Animate.css](https://daneden.github.io/animate.css/)**
+
+* Do you want to animate Modals? This template have an example. More examples **[here](https://github.com/kevincobain2000/ionic-animated-modal)**
+```
+//Using the Modals service in this template
+Modals.openModal($scope, 'templates/modals/users.html', 'animated rotateInDownLeft');
+```
+* Do you want to animate Popups and other elements? See an example:
+```
+ $ionicPopup.alert({
+	title: 'Hello World',
+	template: 'This is the best template to start with Ionic Framework!',
+	cssClass: 'animated bounceInDown'
+});
+```
+
+#npm commands
 Command | Action
 ------- | ------
-`npm i ionic cordova bower -g` | Install Ionic, Cordova and Bower packages globally 
+`npm i ionic cordova bower gulp -g` | Install Ionic, Cordova, Bower and Gulp packages globally 
 `npm cache clean` | Remove the cache to force update the packages. Useful to solve npm issues using the CLI.
 
 #Ionic commands
@@ -63,6 +79,10 @@ Command         | Action
 `ionic serve`   | Test on the browser
 `ionic serve --lab` | Test on the browser iOS and Android version 
 `ionic lib update`  | Update Ionic library files
+`ionic resources`   | Generate icons and splash screens. The images are located in `./resources/` directory. More info **[here](http://ionicframework.com/docs/cli/icon-splashscreen.html)**.
+`ionic resources --icon` | Generate only the icons. `icon.png`, `icon.psd` or `icon.ai` is located in `./resources/` directory
+`ionic resources --splash` | Generate only the splash screens. `splash.png`, `splash.psd` or `splash.ai` is located in `./resources/` directory
+`ionic resources ios --icon` | Generate icons per platform
 
 #Cordova commands
 
@@ -106,9 +126,9 @@ Name            | Description
 
 * **Ionic, seriously?** The cache is the best... but, How is possible to know if a specific view is cached? (From a directive)
 
-* **Microsoft, seriously??** Help to improve existing cordova plugins instead of create new plugins only for Windows platform!
+* **Microsoft, seriously?** Help to improve existing cordova plugins instead of create new plugins only for Windows platform!
 
-* **Apple, seriously???** Thanks for nothing... I need a MAC but I'm poor like my colleagues at the beginning
+* **Apple, seriously?** Thanks for nothing! I need a MAC or the help of a friend to build for iOS... Are we playing Who Wants to be a Millionaire?
 
 # Happy coding
 Made with <3
