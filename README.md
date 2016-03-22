@@ -82,6 +82,48 @@ This template include an example **(pre-populated database)**, you can test in t
 $sqliteService.preloadDataBase(true);
 ```
 
+#Ionic Tips
+* Ionic View LifeCycle: More **[here](http://www.gajotres.net/understanding-ionic-view-lifecycle/)**
+```javascript
+$scope.$on('$ionicView.beforeEnter', function(){
+  alert("Before to enter to the view");
+});
+$scope.$on('$ionicView.afterEnter', function(){
+  alert("After to enter to the view");
+});
+```
+
+* Disable the back option before to navigate to other state:
+```javascript
+$ionicHistory.nextViewOptions({
+    disableBack: true,
+    disableAnimate : true,
+    historyRoot  : true
+});
+```
+* Clear the cache:
+> $ionicHistory.clearCache();
+* Clear the history:
+> $ionicHistory.clearHistory();
+* Change the direction before to navigate to other state:
+> $ionicViewSwitcher.nextDirection('back');
+* Navigate to other state:
+> $state.go("app.login");
+* Disable the drag to open the side menu:
+> $ionicSideMenuDelegate.canDragContent(false);
+
+###**Global configuration**:
+* Enable the native scrolling (Enable or Disable jsScrolling):
+> $ionicConfigProvider.scrolling.jsScrolling(false);
+* Set the Maximum number of view elements to cache in the DOM:
+> $ionicConfigProvider.views.maxCache(5);
+* Center align the title in the navBar:
+> $ionicConfigProvider.navBar.alignTitle('center');
+* Disable swipeback on iOS:
+> $ionicConfigProvider.views.swipeBackEnabled(false);
+* Set the back button text to empty:
+> $ionicConfigProvider.backButton.previousTitleText(false).text('');
+
 #npm commands
 Command | Action
 ------- | ------

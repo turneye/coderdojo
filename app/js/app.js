@@ -23,8 +23,8 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
       StatusBar.styleDefault();
     }
 		
-		//Load the Pre-populated database, debug = true
-		$sqliteService.preloadDataBase(true);
+    //Load the Pre-populated database, debug = true
+    $sqliteService.preloadDataBase(true);
   });
 }])
 .config(['$stateProvider',
