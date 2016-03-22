@@ -102,27 +102,47 @@ $ionicHistory.nextViewOptions({
 });
 ```
 * Clear the cache:
-> $ionicHistory.clearCache();
+```javascript
+$ionicHistory.clearCache();
+```
 * Clear the history:
-> $ionicHistory.clearHistory();
+```javascript
+$ionicHistory.clearHistory();
+```
 * Change the direction before to navigate to other state:
-> $ionicViewSwitcher.nextDirection('back');
+```javascript
+$ionicViewSwitcher.nextDirection('back');
+```
 * Navigate to other state:
-> $state.go("app.login");
+```javascript
+$state.go("app.login");
+```
 * Disable the drag to open the side menu:
-> $ionicSideMenuDelegate.canDragContent(false);
+```javascript
+$ionicSideMenuDelegate.canDragContent(false);
+```
 
 ###**Global configuration**:
 * Enable the native scrolling (Enable or Disable jsScrolling):
-> $ionicConfigProvider.scrolling.jsScrolling(false);
+```javascript
+$ionicConfigProvider.scrolling.jsScrolling(false);
+```
 * Set the Maximum number of view elements to cache in the DOM:
-> $ionicConfigProvider.views.maxCache(5);
+```javascript
+$ionicConfigProvider.views.maxCache(5);
+```
 * Center align the title in the navBar:
+```javascript
 > $ionicConfigProvider.navBar.alignTitle('center');
+```
 * Disable swipeback on iOS:
+```javascript
 > $ionicConfigProvider.views.swipeBackEnabled(false);
+```
 * Set the back button text to empty:
+```javascript
 > $ionicConfigProvider.backButton.previousTitleText(false).text('');
+```
 
 #npm commands
 Command | Action
