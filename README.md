@@ -92,7 +92,10 @@ $scope.$on('$ionicView.afterEnter', function(){
   alert("After to enter to the view");
 });
 ```
-
+* Reload the current state:
+```javascript
+$state.go($state.current, {}, {reload: true});
+```
 * Disable the back option before to navigate to other state:
 ```javascript
 $ionicHistory.nextViewOptions({
