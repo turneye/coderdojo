@@ -133,15 +133,15 @@ $ionicConfigProvider.views.maxCache(5);
 ```
 * Center align the title in the navBar:
 ```javascript
-> $ionicConfigProvider.navBar.alignTitle('center');
+$ionicConfigProvider.navBar.alignTitle('center');
 ```
 * Disable swipeback on iOS:
 ```javascript
-> $ionicConfigProvider.views.swipeBackEnabled(false);
+$ionicConfigProvider.views.swipeBackEnabled(false);
 ```
 * Set the back button text to empty:
 ```javascript
-> $ionicConfigProvider.backButton.previousTitleText(false).text('');
+$ionicConfigProvider.backButton.previousTitleText(false).text('');
 ```
 
 #npm commands
