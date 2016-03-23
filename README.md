@@ -147,6 +147,18 @@ $ionicConfigProvider.views.swipeBackEnabled(false);
 $ionicConfigProvider.backButton.previousTitleText(false).text('');
 ```
 
+#Crosswalk
+Improve the performance of your HTML, CSS, and JavaScript if is required.
+
+Command | Action
+------- | ------
+`ionic browser list` | Show all the browsers available by platform
+`ionic browser rm crosswalk` | Remove a browser
+`ionic browser add crosswalk` | Install the Chromium browser for Android
+`ionic browser add crosswalk@10.39.235.15` | Specifies a version of Chromium
+`ionic browser add crosswalk-lite` | Install the Crosswalk lite version
+`ionic browser revert android` | Remove any custom browser that was installed for the platform by replacing it with the system default browser
+
 #npm commands
 Command | Action
 ------- | ------
