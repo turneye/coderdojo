@@ -22,6 +22,9 @@ You need to obfuscate your code and reduce the size of your mobile applications.
 - Use CSS animations with **Animate.css**
 - Use **SQLite** with a service pattern. **(Pre-filled databases)**
 
+#Projects using this template
+- **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
+
 #Instructions
 
 1. Download this template.
