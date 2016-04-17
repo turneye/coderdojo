@@ -49,7 +49,7 @@ gulp.task('index', function() {
     return gulp.src(paths.index)
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("./www/"))
-        .pipe(notify({ message: 'Index builded' }));
+        .pipe(notify({ message: 'Index built' }));
 });
 
 gulp.task('scripts', function() {
@@ -61,7 +61,7 @@ gulp.task('scripts', function() {
         .pipe(rename('app.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest("./www/build/"))
-        .pipe(notify({ message: 'Scripts builded' }));
+        .pipe(notify({ message: 'Scripts built' }));
 });
 
 gulp.task('styles', function() {
@@ -75,7 +75,7 @@ gulp.task('styles', function() {
         .pipe(rename({ suffix: '.min' }))
         .pipe(minifyCss())
         .pipe(gulp.dest('./www/css/'))
-        .pipe(notify({ message: 'Styles builded' }));
+        .pipe(notify({ message: 'Styles built' }));
 });
 
 function MinifyTemplates(path, destPath) {
@@ -86,7 +86,7 @@ function MinifyTemplates(path, destPath) {
 
 gulp.task('templates', ['clean-templates'], function() {
     return MinifyTemplates(paths.templates).on('end', function() {
-        gulp.src('').pipe(notify({ message: 'Templates builded' }))
+        gulp.src('').pipe(notify({ message: 'Templates built' }))
     });
 });
 
@@ -98,14 +98,14 @@ function MinifyImages(path, destPath) {
 
 gulp.task('images', ['clean-images'], function() {
     return MinifyImages(paths.images).on('end', function() {
-        gulp.src('').pipe(notify({ message: 'Images builded' }))
+        gulp.src('').pipe(notify({ message: 'Images built' }))
     });
 });
 
 gulp.task('lib', function(done) {
     //https://forum.ionicframework.com/t/how-to-manage-bower-overweight/17997/10?u=jdnichollsc
     preen.preen({}, function() {
-        gulp.src('').pipe(notify({ message: 'Lib builded' }));
+        gulp.src('').pipe(notify({ message: 'Lib built' }));
         done();
     });
 });
@@ -131,7 +131,7 @@ gulp.task('watch', function() {
             var pathFile = path.relative(__dirname, event.path);
             var destPath = path.dirname(destPathFile);
             MinifyTemplates(pathFile, destPath).on('end', function() {
-                gulp.src('').pipe(notify({ message: 'Template builded' }))
+                gulp.src('').pipe(notify({ message: 'Template built' }))
             });
         }
     });
@@ -143,7 +143,7 @@ gulp.task('watch', function() {
             var pathFile = path.relative(__dirname, event.path);
             var destPath = path.dirname(destPathFile);
             MinifyImages(pathFile, destPath).on('end', function() {
-                gulp.src('').pipe(notify({ message: 'Image builded' }))
+                gulp.src('').pipe(notify({ message: 'Image built' }))
             });
         }
     });
