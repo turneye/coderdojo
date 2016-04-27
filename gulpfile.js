@@ -21,7 +21,7 @@ var paths = {
     sass: ['scss/**/*.scss'],
     index: 'app/index.html',
     scripts: ['app/js/app.js', 'app/js/**/*.js'],
-    styles: 'app/scss/*.scss',
+    styles: 'app/scss/**/*.*',
     templates: 'app/templates/**/*.*',
     images: 'app/img/**/*.*',
     lib: 'www/lib/**/*.*',
@@ -31,6 +31,10 @@ var paths = {
 };
 
 gulp.task('default', ['sass', 'index', 'scripts', 'styles', 'templates', 'images', 'lib']);
+
+gulp.task('serve', function(done){
+    sh.exec('ionic serve', done); 
+});
 
 gulp.task('sass', function(done) {
     gulp.src('./scss/ionic.app.scss')

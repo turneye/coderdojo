@@ -45,6 +45,21 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
             url: "/home",
             templateUrl: "templates/home.html",
             controller: 'HomeController'
+        })
+        .state('app', {
+            url: '/app',
+            abstract: true,
+            templateUrl: 'templates/menu.html'
+        })
+        .state('app.gallery', {
+            url: "/gallery",
+            cache: false,
+            views: {
+                viewContent: {
+                    templateUrl: "templates/gallery.html",
+                    controller: 'GalleryController'
+                }
+            }
         });
         
     $urlRouterProvider.otherwise(function ($injector, $location) {

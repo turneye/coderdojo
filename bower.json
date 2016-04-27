@@ -2,7 +2,7 @@
   "name": "App",
   "private": true,
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.2.4"
+    "ionic": "driftyco/ionic-bower#master"
   },
   "preen": {
     "ngCordova": [
