@@ -29,10 +29,11 @@ You need to obfuscate your code and reduce the size of your mobile applications.
 
 1. Download this template.
 2. Execute the command `npm install`
-3. Run Ionic: 
+3. Execute the command `gulp`
+4. Run Ionic: 
    - `ionic serve` to test on the browser **(Gulp is running)**.
    - `ionic run android` to test on the device.
-4. Modify this template and create your hybrid mobile app.
+5. Modify this template and create your hybrid mobile app.
 
 #Template Structure
 
