@@ -41,6 +41,24 @@
         background: linear-gradient(10deg, #313131, #1c1c1c, #002F57);
         background-size: 800% 800%;
         animation: background 26s ease infinite;
+        
+        .item{
+            border: none;
+            background-color: transparent;
+            .item-content{
+                background-color: transparent;
+                color: white;
+            }
+        }
+        
+        .item.active{
+            background-color: white !important;
+            
+            .item-content{
+                color: black;
+                font-weight: bold;
+            }
+        }
     }
 }
 

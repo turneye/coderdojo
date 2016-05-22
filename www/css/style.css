@@ -455,6 +455,20 @@
     vertical-align: middle;
     text-align: center; }
 
+.center {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .animate-item {
   -webkit-animation: fadeInLeft 1s;
           animation: fadeInLeft 1s; }
@@ -537,11 +551,15 @@
 .homeView button {
   font-size: 26px; }
 
-.homeView .center-content {
+.homeView .scroll-content {
   background: linear-gradient(145deg, #6C6C6C, #95A2AB, #206AA7, #00508D, #002F57, #442144);
   background-size: 800% 800%;
   -webkit-animation: background 26s ease infinite;
           animation: background 26s ease infinite; }
+  .homeView .scroll-content .scroll {
+    height: 100%; }
+    .homeView .scroll-content .scroll .row-center {
+      height: 100%; }
 
 @-webkit-keyframes background {
   0% {
@@ -561,6 +579,10 @@
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
   display: none !important; }
+
+.itemView .animated {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
 
 .menu ion-header-bar {
   border: none;
@@ -593,10 +615,36 @@
   background-size: 800% 800%;
   -webkit-animation: background 26s ease infinite;
           animation: background 26s ease infinite; }
+  .menu ion-content .item {
+    border: none;
+    background-color: transparent; }
+    .menu ion-content .item .item-content {
+      background-color: transparent;
+      color: white; }
+  .menu ion-content .item.active {
+    background-color: white !important; }
+    .menu ion-content .item.active .item-content {
+      color: black;
+      font-weight: bold; }
 
 .menu-open .menu ion-header-bar img {
   -webkit-animation-name: flash;
           animation-name: flash; }
+
+.popoverView {
+  background-color: #4E5E6E !important; }
+  .popoverView .scroll {
+    height: 100%; }
+    .popoverView .scroll .slider {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      bottom: 0 !important;
+      right: 0 !important;
+      text-align: center; }
+      .popoverView .scroll .slider .slider-slide img {
+        max-height: 100%;
+        max-width: 100%; }
 
 .usersModal .title, .usersModal .item {
   font-family: 'Jura'; }

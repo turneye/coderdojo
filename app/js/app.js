@@ -36,9 +36,7 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
     $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content|ms-appx|x-wmapp0):|data:image\/|img\//);
     $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|ghttps?|ms-appx|x-wmapp0):/);
     
-    if (ionic.Platform.isIOS()) {
-        $ionicConfigProvider.scrolling.jsScrolling(true);
-    }
+    $ionicConfigProvider.scrolling.jsScrolling(ionic.Platform.isIOS());
     
     $stateProvider
         .state('home', {
@@ -49,6 +47,7 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
         .state('app', {
             url: '/app',
             abstract: true,
+            controller: 'AppController',
             templateUrl: 'templates/menu.html'
         })
         .state('app.gallery', {
@@ -58,6 +57,20 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
                 viewContent: {
                     templateUrl: "templates/gallery.html",
                     controller: 'GalleryController'
+                }
+            }
+        })
+        .state('app.item', {
+            url: "/item/{title}",
+            params: {
+                color: null,
+                icon: null
+            },
+            cache: false,
+            views: {
+                viewContent: {
+                    templateUrl: "templates/item.html",
+                    controller: 'ItemController'
                 }
             }
         });
