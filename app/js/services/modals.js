@@ -11,7 +11,7 @@
 		var modals = [];
 
 		var _openModal = function ($scope, templateUrl, animation) {
-			$ionicModal.fromTemplateUrl(templateUrl, {
+			return $ionicModal.fromTemplateUrl(templateUrl, {
 				scope: $scope,
 				animation: animation || 'slide-in-up',
 				backdropClickToClose: false
