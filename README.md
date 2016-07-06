@@ -25,6 +25,8 @@ You need to obfuscate your code and reduce the size of your mobile applications.
 #Projects using this template
 - **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
 
+> Do you have a project using this template? Let me know to share it with everyone!
+
 #Instructions
 
 1. Download this template.
