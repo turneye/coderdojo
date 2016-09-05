@@ -17,10 +17,14 @@ You need to obfuscate your code and reduce the size of your mobile applications.
 - Design your application with a maintainable code using **Sass** and writing less code using **Autoprefixer**. Concatenate and Minify styles in a stylesheet.
 - Concatenate and Uglify javascript files using Source maps to debug the code easily.
 - Compress images to reduce the size of your application.
-- Compress templates, respecting your structure.
+- Compress html templates, respecting your structure.
 - Clean unnecessary files downloaded with Bower.
 - Use CSS animations with **Animate.css**.
 - Use **SQLite** with a service pattern. **You can use Pre-filled databases**.
+
+<img width="200px" height="340px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_1.png">
+<img width="200px" height="340px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_2.png">
+<img width="200px" height="340px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_3.png">
 
 #Projects using this template
 - **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
