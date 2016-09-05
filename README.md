@@ -22,9 +22,9 @@ You need to obfuscate your code and reduce the size of your mobile applications.
 - Use CSS animations with **Animate.css**.
 - Use **SQLite** with a service pattern. **You can use Pre-filled databases**.
 
-<img width="200px" height="340px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_1.png">
-<img width="200px" height="340px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_2.png">
-<img width="200px" height="340px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_3.png">
+<img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_1.png">
+<img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_2.png">
+<img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_3.png">
 
 #Projects using this template
 - **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
