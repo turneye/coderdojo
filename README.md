@@ -25,6 +25,7 @@ You need to obfuscate your code and reduce the size of your mobile applications.
 # Demo
 
 Do you want to see this starter in action? Visit https://jdnichollsc.github.io/Ionic-Starter-Template/ yay!
+> Automatically deployed to GitHub Pages using Gulp - Check the **last task** into [gulpfile.js](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/master/gulpfile.js)
 
 <img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_1.png">
 <img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_2.png">
