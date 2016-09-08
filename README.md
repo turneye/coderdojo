@@ -22,6 +22,10 @@ You need to obfuscate your code and reduce the size of your mobile applications.
 - Use CSS animations with **Animate.css**.
 - Use **SQLite** with a service pattern. **You can use Pre-filled databases**.
 
+# Demo
+
+Do you want to see this starter in action? Visit https://jdnichollsc.github.io/Ionic-Starter-Template/ yay!
+
 <img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_1.png">
 <img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_2.png">
 <img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_3.png">

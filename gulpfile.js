@@ -32,11 +32,11 @@ var paths = {
 
 gulp.task('default', ['sass', 'index', 'scripts', 'styles', 'templates', 'images', 'lib']);
 
-gulp.task('serve', function(done){
-    sh.exec('ionic serve', done); 
+gulp.task('serve', function (done) {
+    sh.exec('ionic serve', done);
 });
 
-gulp.task('sass', function(done) {
+gulp.task('sass', function (done) {
     gulp.src('./scss/ionic.app.scss')
         .pipe(sass())
         .on('error', sass.logError)
@@ -49,14 +49,14 @@ gulp.task('sass', function(done) {
         .on('end', done);
 });
 
-gulp.task('index', function() {
+gulp.task('index', function () {
     return gulp.src(paths.index)
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("./www/"))
         .pipe(notify({ message: 'Index built' }));
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
     return gulp.src(paths.scripts)
         .pipe(sourcemaps.init())
         .pipe(concat("app.js"))
@@ -68,7 +68,7 @@ gulp.task('scripts', function() {
         .pipe(notify({ message: 'Scripts built' }));
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
     return gulp.src(paths.styles)
         .pipe(sourcemaps.init())
         .pipe(sass())
@@ -88,8 +88,8 @@ function MinifyTemplates(path, destPath) {
         .pipe(gulp.dest(destPath || paths.destTemplates));
 }
 
-gulp.task('templates', ['clean-templates'], function() {
-    return MinifyTemplates(paths.templates).on('end', function() {
+gulp.task('templates', ['clean-templates'], function () {
+    return MinifyTemplates(paths.templates).on('end', function () {
         gulp.src('').pipe(notify({ message: 'Templates built' }))
     });
 });
@@ -100,53 +100,53 @@ function MinifyImages(path, destPath) {
         .pipe(gulp.dest(destPath || paths.destImages));
 }
 
-gulp.task('images', ['clean-images'], function() {
-    return MinifyImages(paths.images).on('end', function() {
+gulp.task('images', ['clean-images'], function () {
+    return MinifyImages(paths.images).on('end', function () {
         gulp.src('').pipe(notify({ message: 'Images built' }))
     });
 });
 
-gulp.task('lib', function(done) {
+gulp.task('lib', function (done) {
     //https://forum.ionicframework.com/t/how-to-manage-bower-overweight/17997/10?u=jdnichollsc
-    preen.preen({}, function() {
+    preen.preen({}, function () {
         gulp.src('').pipe(notify({ message: 'Lib built' }));
         done();
     });
 });
 
-gulp.task('clean-images', function() {
+gulp.task('clean-images', function () {
     return del(paths.destImages);
 });
 
-gulp.task('clean-templates', function() {
+gulp.task('clean-templates', function () {
     return del(paths.destTemplates);
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch(paths.sass, ['sass']);
     gulp.watch(paths.index, ['index']);
     gulp.watch(paths.scripts, ['scripts']);
     gulp.watch(paths.styles, ['styles']);
-    gulp.watch(paths.templates, function(event){
+    gulp.watch(paths.templates, function (event) {
         var destPathFile = path.join('./www', path.relative(path.join(__dirname, './app'), event.path));
-        if(event.type === "deleted"){
+        if (event.type === "deleted") {
             del(destPathFile);
-        }else{
+        } else {
             var pathFile = path.relative(__dirname, event.path);
             var destPath = path.dirname(destPathFile);
-            MinifyTemplates(pathFile, destPath).on('end', function() {
+            MinifyTemplates(pathFile, destPath).on('end', function () {
                 gulp.src('').pipe(notify({ message: 'Template built' }))
             });
         }
     });
-    gulp.watch(paths.images, function(event){
+    gulp.watch(paths.images, function (event) {
         var destPathFile = path.join('./www', path.relative(path.join(__dirname, './app'), event.path));
-        if(event.type === "deleted"){
+        if (event.type === "deleted") {
             del(destPathFile);
-        }else{
+        } else {
             var pathFile = path.relative(__dirname, event.path);
             var destPath = path.dirname(destPathFile);
-            MinifyImages(pathFile, destPath).on('end', function() {
+            MinifyImages(pathFile, destPath).on('end', function () {
                 gulp.src('').pipe(notify({ message: 'Image built' }))
             });
         }
@@ -154,14 +154,14 @@ gulp.task('watch', function() {
     gulp.watch(paths.lib, ['lib']);
 });
 
-gulp.task('install', ['git-check'], function() {
+gulp.task('install', ['git-check'], function () {
     return bower.commands.install()
-        .on('log', function(data) {
+        .on('log', function (data) {
             gutil.log('bower', gutil.colors.cyan(data.id), data.message);
         });
 });
 
-gulp.task('git-check', function(done) {
+gulp.task('git-check', function (done) {
     if (!sh.which('git')) {
         console.log(
             '  ' + gutil.colors.red('Git is not installed.'),
@@ -172,4 +172,31 @@ gulp.task('git-check', function(done) {
         process.exit(1);
     }
     done();
+});
+
+/* GitHub Page - http(s)://<username>.github.io/<projectname>
+   TODO: Execute the following steps if you don't want to publish your code to GitHub Pages like a demo.
+   - Uninstall the gulp plugins from package.json: 
+        npm uninstall gulp-gh-pages --save-dev
+        npm uninstall merge2 --save-dev 
+   - Remove the folder './gh-pages'
+   - Remove the code below
+*/
+var ghPages = require('gulp-gh-pages');
+var merge2  = require('merge2');
+
+gulp.task('deploy-files', function () {
+    var sourcePath = [
+        './www/**/*',
+        '!./www/pre.db'
+    ];
+    return merge2(
+        gulp.src('./gh-pages/**/*'),
+        gulp.src(sourcePath, { base: './' })
+    )
+    .pipe(ghPages());
+});
+
+gulp.task('deploy', ['deploy-files'], function () {
+    gulp.src('').pipe(notify({ message: 'GitHub Page updated' }));
 });
