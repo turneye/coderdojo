@@ -33,6 +33,7 @@ Do you want to see this starter in action? Visit https://jdnichollsc.github.io/I
 
 #Projects using this template
 - **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
+- **[Ionic ElastiChat](https://jdnichollsc.github.io/Ionic-ElastiChat-with-Images/)**
 
 > Do you have a project using this template? Let me know to share it with everyone!
 
