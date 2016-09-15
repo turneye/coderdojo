@@ -30,6 +30,8 @@ var paths = {
     destTemplates: './www/templates/'
 };
 
+gulp.task('serve:before', ['watch']);
+
 gulp.task('default', ['sass', 'index', 'scripts', 'styles', 'templates', 'images', 'lib']);
 
 gulp.task('serve', function (done) {

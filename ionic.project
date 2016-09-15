@@ -5,6 +5,7 @@
     "watch"
   ],
   "watchPatterns": [
-    "app/**/*"
+    "www/**/*",
+    "!www/lib/**/*"
   ]
 }
