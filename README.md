@@ -152,6 +152,16 @@ $state.go("app.login");
 ```javascript
 $ionicSideMenuDelegate.canDragContent(false);
 ```
+* Check the current platform
+```javascript
+var isWebView = ionic.Platform.isWebView();
+```
+* Disabling the tap system (To disable the tap for an element and all of its children elements)
+```html
+<div data-tap-disabled="true">
+    <div id="google-map"></div>
+</div>
+```
 
 ###**Global configuration**:
 * Enable the native scrolling (Enable or Disable jsScrolling):
