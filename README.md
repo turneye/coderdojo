@@ -162,6 +162,12 @@ var isWebView = ionic.Platform.isWebView();
     <div id="google-map"></div>
 </div>
 ```
+* Using Ionic gestures with options from directives
+```javascript
+$ionicGesture.on('hold', function (e) {
+  //Code...
+}, element, { hold_threshold: 20 });
+```
 
 ###**Global configuration**:
 * Enable the native scrolling (Enable or Disable jsScrolling):
@@ -183,6 +189,10 @@ $ionicConfigProvider.views.swipeBackEnabled(false);
 * Set the back button text to empty:
 ```javascript
 $ionicConfigProvider.backButton.previousTitleText(false).text('');
+```
+* Change Ionic gestures options:
+```javascript
+ionic.Gestures.gestures.Hold.defaults.hold_threshold = 20;
 ```
 
 #Crosswalk
