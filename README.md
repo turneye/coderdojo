@@ -163,11 +163,15 @@ var isWebView = ionic.Platform.isWebView();
     <div id="google-map"></div>
 </div>
 ```
-* Using Ionic gestures with options from directives
+* Using Ionic gestures with options from Angular Directives
 ```javascript
 $ionicGesture.on('hold', function (e) {
   //Code...
 }, element, { hold_threshold: 20 });
+```
+* Ionic trigger **[events](http://ionicframework.com/docs/api/utility/ionic.EventController/)**
+```javascript
+ionic.trigger("hold", { target: document.getElementsByClassName("item")[0] });
 ```
 
 ###**Global configuration**:
@@ -195,6 +199,29 @@ $ionicConfigProvider.backButton.previousTitleText(false).text('');
 ```javascript
 ionic.Gestures.gestures.Hold.defaults.hold_threshold = 20;
 ```
+* Platform Customization
+
+  Platform | CSS Class
+  ------- | ------
+  Browser | platform-browser
+  Cordova | platform-cordova
+  Webview | platform-webview
+  iOS | platform-ios
+  iPad | platform-ipad
+  Android | platform-android
+  Windows Phone | platform-windowsphone
+  
+  * Dynamically Loading Templates
+  ```javascript
+  .state('tab', {
+    templateUrl: function() {
+      if (ionic.Platform.isAndroid()) {
+          return  "templates/home-android.html";
+      }
+      return "templates/home.html";
+    }
+  });
+  ```
 
 #Crosswalk
 Improve the performance of your HTML, CSS, and JavaScript if is required.
