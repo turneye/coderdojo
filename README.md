@@ -166,7 +166,7 @@ var isWindowsPhone = ionic.Platform.isWindowsPhone();
 var currentPlatform = ionic.Platform.platform();
 var currentPlatformVersion = ionic.Platform.version();
 ```
-* Disabling the tap system (To disable the tap for an element and all of its children elements)
+* Disabling the tap system **(To disable the tap for an element and all of its children elements)**
 ```html
 <div data-tap-disabled="true">
     <div id="google-map"></div>
