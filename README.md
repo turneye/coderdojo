@@ -155,7 +155,16 @@ $ionicSideMenuDelegate.canDragContent(false);
 ```
 * Check the current platform
 ```javascript
+var deviceInformation = ionic.Platform.device();
+
 var isWebView = ionic.Platform.isWebView();
+var isIPad = ionic.Platform.isIPad();
+var isIOS = ionic.Platform.isIOS();
+var isAndroid = ionic.Platform.isAndroid();
+var isWindowsPhone = ionic.Platform.isWindowsPhone();
+
+var currentPlatform = ionic.Platform.platform();
+var currentPlatformVersion = ionic.Platform.version();
 ```
 * Disabling the tap system (To disable the tap for an element and all of its children elements)
 ```html
@@ -172,6 +181,12 @@ $ionicGesture.on('hold', function (e) {
 * Ionic trigger **[events](http://ionicframework.com/docs/api/utility/ionic.EventController/)**
 ```javascript
 ionic.trigger("hold", { target: document.getElementsByClassName("item")[0] });
+```
+* Execute when device is ready
+```javascript
+ionic.Platform.ready(function(){
+  //Code...
+});
 ```
 
 ###**Global configuration**:
