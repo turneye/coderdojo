@@ -32,6 +32,7 @@ Do you want to see this starter in action? Visit https://jdnichollsc.github.io/I
 <img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_3.png">
 
 #Projects using this template
+- **[Hartford Fashion Week](https://play.google.com/store/apps/details?id=fashion.hartford.app) - Created by [Matthew Seremet](http://matthewseremet.com/)**
 - **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
 - **[Ionic ElastiChat](https://jdnichollsc.github.io/Ionic-ElastiChat-with-Images/)**
 - **[Ionic Drag and Drop](https://jdnichollsc.github.io/Ionic-Drag-and-Drop)**
