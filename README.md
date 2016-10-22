@@ -293,10 +293,11 @@ Name            | Description
 #Visual Studio Code commands and shortcuts
 Command/Shortcut        | Action
 --------------- | --------------
-`code .` | Open the editor
+`code .` | Open the editor from CLI
 `F1` | Open the `Command Palette`
 `Ctrl + Shift + N` | Open other Visual Studio Code instance
 `Ctrl + }` | Toogle comment code
+`Ctrl + ñ` | Open the Integrated Terminal
 
 #Sign to Android (Commands)
 

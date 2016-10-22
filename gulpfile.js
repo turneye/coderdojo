@@ -14,8 +14,10 @@ var preen = require('preen');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
+var jshint = require('gulp-jshint');
 var path = require('path');
 var del = require('del');
+var pump = require('pump');
 
 var paths = {
     sass: ['scss/**/*.scss'],
@@ -58,23 +60,34 @@ gulp.task('index', function () {
         .pipe(notify({ message: 'Index built' }));
 });
 
-gulp.task('scripts', function () {
-    return gulp.src(paths.scripts)
-        .pipe(sourcemaps.init())
-        .pipe(concat("app.js"))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest("./www/build/"))
-        .pipe(rename('app.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest("./www/build/"))
-        .pipe(notify({ message: 'Scripts built' }));
+gulp.task('scripts', function (done) {
+    pump([
+        gulp.src(paths.scripts),
+        jshint(),
+        jshint.reporter('default', { verbose: true }),
+        //jshint.reporter('fail'), //Fail if jshint show errors in console
+        sourcemaps.init(),
+        concat("app.js"),
+        sourcemaps.write(),
+        gulp.dest("./www/build/"),
+        rename('app.min.js'),
+        uglify(),
+        gulp.dest("./www/build/"),
+        notify({ message: 'Scripts built' })
+    ],
+        done
+    );
 });
 
 gulp.task('styles', function () {
     return gulp.src(paths.styles)
         .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(autoprefixer('last 2 version'))
+        .on('error', sass.logError)
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./www/css/'))

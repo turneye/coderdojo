@@ -73,18 +73,18 @@
 
 			//window.open("data:text/plain;charset=utf-8," + JSON.stringify({ data: window.queries.join('').replace(/\\n/g, '\n') }));
 			if (window.sqlitePlugin === undefined) {
-				enableLog && console.log('%c ***************** Starting the creation of the database in the browser ***************** ', 'background: #222; color: #bada55');
+				if(enableLog) console.log('%c ***************** Starting the creation of the database in the browser ***************** ', 'background: #222; color: #bada55');
 				self.db().transaction(function (tx) {
 					for (var i = 0; i < window.queries.length; i++) {
 						var query = window.queries[i].replace(/\\n/g, '\n');
 
-						enableLog && console.log(window.queries[i]);
+						if(enableLog) console.log(window.queries[i]);
 						tx.executeSql(query);
 					}
 				}, function (error) {
 					deferred.reject(error);
 				}, function () {
-					enableLog && console.log('%c ***************** Completing the creation of the database in the browser ***************** ', 'background: #222; color: #bada55');
+					if(enableLog) console.log('%c ***************** Completing the creation of the database in the browser ***************** ', 'background: #222; color: #bada55');
 					deferred.resolve("OK");
 				});
 			}

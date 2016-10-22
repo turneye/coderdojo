@@ -1,10 +1,9 @@
 /* global ionic */
 (function (angular, ionic) {
-	"use strict";
 
 	ionic.Platform.isIE = function () {
 		return ionic.Platform.ua.toLowerCase().indexOf('trident') > -1;
-	}
+	};
 
 	if (ionic.Platform.isIE()) {
 		angular.module('ionic')
