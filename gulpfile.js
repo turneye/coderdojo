@@ -7,7 +7,6 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var uglify = require('gulp-uglify');
-var foreach = require('gulp-foreach');
 var htmlmin = require('gulp-htmlmin');
 var notify = require("gulp-notify");
 var preen = require('preen');
