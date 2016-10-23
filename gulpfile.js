@@ -102,9 +102,10 @@ function MinifyTemplates(path, destPath) {
         .pipe(gulp.dest(destPath || paths.destTemplates));
 }
 
-gulp.task('templates', ['clean-templates'], function () {
-    return MinifyTemplates(paths.templates).on('end', function () {
-        gulp.src('').pipe(notify({ message: 'Templates built' }))
+gulp.task('templates', ['clean-templates'], function (done) {
+    MinifyTemplates(paths.templates).on('end', function () {
+        gulp.src('').pipe(notify({ message: 'Templates built' }));
+        done();
     });
 });
 
@@ -114,9 +115,10 @@ function MinifyImages(path, destPath) {
         .pipe(gulp.dest(destPath || paths.destImages));
 }
 
-gulp.task('images', ['clean-images'], function () {
-    return MinifyImages(paths.images).on('end', function () {
-        gulp.src('').pipe(notify({ message: 'Images built' }))
+gulp.task('images', ['clean-images'], function (done) {
+    MinifyImages(paths.images).on('end', function () {
+        gulp.src('').pipe(notify({ message: 'Images built' }));
+        done();
     });
 });
 
@@ -149,7 +151,7 @@ gulp.task('watch', function () {
             var pathFile = path.relative(__dirname, event.path);
             var destPath = path.dirname(destPathFile);
             MinifyTemplates(pathFile, destPath).on('end', function () {
-                gulp.src('').pipe(notify({ message: 'Template built' }))
+                gulp.src('').pipe(notify({ message: 'Template built' }));
             });
         }
     });
@@ -161,7 +163,7 @@ gulp.task('watch', function () {
             var pathFile = path.relative(__dirname, event.path);
             var destPath = path.dirname(destPathFile);
             MinifyImages(pathFile, destPath).on('end', function () {
-                gulp.src('').pipe(notify({ message: 'Image built' }))
+                gulp.src('').pipe(notify({ message: 'Image built' }));
             });
         }
     });
@@ -212,5 +214,5 @@ gulp.task('deploy-files', function () {
 });
 
 gulp.task('deploy', ['deploy-files'], function () {
-    gulp.src('').pipe(notify({ message: 'GitHub Page updated' }));
+    return gulp.src('').pipe(notify({ message: 'GitHub Page updated' }));
 });
