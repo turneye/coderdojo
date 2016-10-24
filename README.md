@@ -1,14 +1,6 @@
-#**The Best Ionic v1.x starter template**
+#**Advanced Ionic Starter**
 
 ![Ionic Framework + Gulp](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/ionic_40.png?raw=true)
-
-**Reinventing the wheel, again!** *Sorry Ionic Team... but there are many noobs learning in Youtube!*
-
-> Are you a noob? Use this template.
-
-> Are you a master? Shut up and use this template! Talk is cheap, show me the code (Pull Request).
-
-<div style="text-align:center"><img src ="https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/reinventing.the.wheel.jpg?raw=true" /></div>
 
 #Introduction
 
@@ -317,14 +309,6 @@ Command/Shortcut        | Action
 * **[Ionic Services](http://docs.ionic.io/)**
 
 ![Your code is mine!](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/obfuscate.png?raw=true)
-
-#Personal comments
-
-* **Ionic, seriously?** The cache is the best... but, How is possible to know if a specific view is cached? (From a directive)
-
-* **Microsoft, seriously?** Help to improve existing cordova plugins instead of create new plugins only for Windows platform!
-
-* **Apple, seriously?** Thanks for nothing! I need a MAC or the help of a friend to build for iOS... Are we playing Who Wants to be a Millionaire?
 
 # Happy coding
 Made with <3
