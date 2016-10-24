@@ -316,7 +316,7 @@ Command/Shortcut        | Action
 * **[Ionic Framework Examples](https://gist.github.com/jdnichollsc/53bfd200f04fd51c87d5)**
 * **[Ionic Services](http://docs.ionic.io/)**
 
-![Your code is mine!](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/ofuscate.jpg?raw=true)
+![Your code is mine!](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/obfuscate.png?raw=true)
 
 #Personal comments
 
