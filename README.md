@@ -94,6 +94,28 @@ This template include an example **(pre-populated database)**, you can test in t
 * **Debug in the browser:** Test using the **`./app/js/queries.js`** file to create your queries **(Drop tables, create tables, insert data, etc)**.
 * **Debug in the device:** Test using the **`./www/pre.db`** file, you can edit the database using **[DB Browser for SQLite](http://sqlitebrowser.org/)**
 
+##Examples using **Angular Services**
+* Returns the first element in a sequence that satisfies a specified condition, throws an exception if no matching element is found in source:
+```javascript
+var query = 'SELECT * FROM Users WHERE Name LIKE '%?%'';
+return $q.when($sqliteService.getFirstItem(query, ['Juan']));
+```
+* Returns the first element of a sequence that satisfies a specified condition, or a default value if the sequence contains no elements:
+```javascript
+var query = 'SELECT * FROM Users WHERE Name LIKE '%?%'';
+return $q.when($sqliteService.getFirstOrDefaultItem(query, ['Juan']));
+```
+* Returns all the elements of a sequence that satisfies a specified condition:
+```javascript
+var query = 'SELECT * FROM Users WHERE Name LIKE '%?%'';
+return $q.when($sqliteService.getItems(query, ['Juan']));
+```
+* Execute SQL query:
+```javascript
+var query = 'DELETE FROM Users WHERE Name LIKE '%?%'';
+return $q.when($sqliteService.executeSql(query, ['Juan']));
+```
+
 ###**Note**: If you don't want to use SQLite, you must perform the following steps:
 1. Remove **`./www/pre.db`** file.
 2. Remove **`./app/js/queries.js`** file.
