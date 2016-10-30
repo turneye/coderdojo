@@ -97,22 +97,22 @@ This template include an example **(pre-populated database)**, you can test in t
 ##Examples using **Angular Services**
 * Returns the first element in a sequence that satisfies a specified condition, throws an exception if no matching element is found in source:
 ```javascript
-var query = 'SELECT * FROM Users WHERE Name LIKE '%?%'';
+var query = "SELECT * FROM Users WHERE Name LIKE '%?%'";
 return $q.when($sqliteService.getFirstItem(query, ['Juan']));
 ```
 * Returns the first element of a sequence that satisfies a specified condition, or a default value if the sequence contains no elements:
 ```javascript
-var query = 'SELECT * FROM Users WHERE Name LIKE '%?%'';
+var query = "SELECT * FROM Users WHERE Name LIKE '%?%'";
 return $q.when($sqliteService.getFirstOrDefaultItem(query, ['Juan']));
 ```
 * Returns all the elements of a sequence that satisfies a specified condition:
 ```javascript
-var query = 'SELECT * FROM Users WHERE Name LIKE '%?%'';
+var query = "SELECT * FROM Users WHERE Name LIKE '%?%'";
 return $q.when($sqliteService.getItems(query, ['Juan']));
 ```
 * Execute SQL query:
 ```javascript
-var query = 'DELETE FROM Users WHERE Name LIKE '%?%'';
+var query = "DELETE FROM Users WHERE Name LIKE '%?%'";
 return $q.when($sqliteService.executeSql(query, ['Juan']));
 ```
 
