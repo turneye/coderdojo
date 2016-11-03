@@ -1,4 +1,4 @@
-#**An advanced Ionic v1.x starter**
+#**An advanced Ionic v1.x template**
 
 ![Ionic Framework + Gulp](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/ionic_40.png?raw=true)
 
