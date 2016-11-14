@@ -94,7 +94,7 @@ This template include an example **(pre-populated database)**, you can test in t
 * **Debug in the browser:** Test using the **`./app/js/queries.js`** file to create your queries **(Drop tables, create tables, insert data, etc)**.
 * **Debug in the device:** Test using the **`./www/pre.db`** file, you can edit the database using **[DB Browser for SQLite](http://sqlitebrowser.org/)**
 
-##Examples using **Angular Services**
+##SQLite examples using **Angular Services**
 * Returns the first element in a sequence that satisfies a specified condition, throws an exception if no matching element is found in source:
 ```javascript
 var query = "SELECT * FROM Users WHERE Name LIKE '%?%'";
