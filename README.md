@@ -41,6 +41,7 @@ Do you want to see this starter in action? Visit https://jdnichollsc.github.io/I
    - `ionic serve` to test on the browser **(Gulp is running by default)**.
    - `ionic run android --livereload` to test on the device.
 5. Modify this template and create your hybrid mobile app.
+6. Check the **[John Papa's Angular Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)**.
 
 #Template Structure
 
