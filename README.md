@@ -111,7 +111,7 @@ return $q.when($sqliteService.getFirstOrDefaultItem(query, ['Juan']));
 var query = "SELECT * FROM Users WHERE Name LIKE '%?%'";
 return $q.when($sqliteService.getItems(query, ['Juan']));
 ```
-* Execute SQL query:
+* Execute a SQL query:
 ```javascript
 var query = "DELETE FROM Users WHERE Name LIKE '%?%'";
 return $q.when($sqliteService.executeSql(query, ['Juan']));
