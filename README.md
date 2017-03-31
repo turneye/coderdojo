@@ -1,8 +1,8 @@
-#**An advanced Ionic v1.x template**
+# **An advanced Ionic v1.x template**
 
 ![Ionic Framework + Gulp](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/ionic_40.png?raw=true)
 
-#Introduction
+# Introduction
 
 You need to obfuscate your code and reduce the size of your mobile applications. With this project you can work with Gulp in the best way, allowing improve your development workflow. This project seeks to improve the following tasks:
 
@@ -23,7 +23,7 @@ Do you want to see this starter in action? Visit https://jdnichollsc.github.io/I
 <img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_2.png">
 <img width="242px" height="411px" src="https://s3.amazonaws.com/ionic-marketplace/ionic-starter-template/screenshot_3.png">
 
-#Projects using this template
+# Projects using this template
 - **[Hartford Fashion Week](https://play.google.com/store/apps/details?id=fashion.hartford.app) - Created by [Matthew Seremet](http://matthewseremet.com/)**
 - **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
 - **[Ionic ElastiChat](https://jdnichollsc.github.io/Ionic-ElastiChat-with-Images/)**
@@ -32,7 +32,7 @@ Do you want to see this starter in action? Visit https://jdnichollsc.github.io/I
 
 > Do you have a project using this template? Let me know to share it with everyone!
 
-#Instructions
+# Instructions
 
 1. Download this template.
 2. Execute the command `npm install`
@@ -43,7 +43,7 @@ Do you want to see this starter in action? Visit https://jdnichollsc.github.io/I
 5. Modify this template and create your hybrid mobile app.
 6. Check the **[John Papa's Angular Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)**.
 
-#Template Structure
+# Template Structure
 
 Path         | Explanation
 ----------   | -------------
@@ -55,7 +55,7 @@ Path         | Explanation
 `./www/css/` | Other css styles like **[Animate.css](https://daneden.github.io/animate.css/)**, etc.
 `./www/lib` | Download scripts using bower.
  	 
-#Using bower to download libraries (npm preen included)
+# Using bower to download libraries (npm preen included)
 
 * Download the script. Eg: `bower install ionic-datepicker --save`
 * Add the path of the files that you will use in `bower.json` from `www/lib`. Eg:
@@ -71,7 +71,7 @@ Path         | Explanation
 * Run gulp in the CLI. Eg: `gulp` or `gulp lib`
 * That's all, folks!!
 
-#Animate elements using **[Animate.css](https://daneden.github.io/animate.css/)**
+# Animate elements using **[Animate.css](https://daneden.github.io/animate.css/)**
 
 * Do you want to animate Modals? This template have an example. More examples **[here](https://github.com/kevincobain2000/ionic-animated-modal)**
 ```javascript
@@ -87,7 +87,7 @@ $ionicPopup.alert({
 });
 ```
 
-#SQLite databases on Android, iOS and Windows (Using **[cordova-sqlite-ext](https://github.com/litehelpers/cordova-sqlite-ext)** plugin)
+# SQLite databases on Android, iOS and Windows (Using **[cordova-sqlite-ext](https://github.com/litehelpers/cordova-sqlite-ext)** plugin)
 This template include an example **(pre-populated database)**, you can test in the **browser** using **Google Chrome** or in your **Device**.
 
 ![Cordova SQLite](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/sqlite.png?raw=true)
@@ -95,7 +95,7 @@ This template include an example **(pre-populated database)**, you can test in t
 * **Debug in the browser:** Test using the **`./app/js/queries.js`** file to create your queries **(Drop tables, create tables, insert data, etc)**.
 * **Debug in the device:** Test using the **`./www/pre.db`** file, you can edit the database using **[DB Browser for SQLite](http://sqlitebrowser.org/)**
 
-##SQLite examples using **Angular Services**
+## SQLite examples using **Angular Services**
 * Returns the first element in a sequence that satisfies a specified condition, throws an exception if no matching element is found in source:
 ```javascript
 var query = "SELECT * FROM Users WHERE Name LIKE '%?%'";
@@ -117,7 +117,7 @@ var query = "DELETE FROM Users WHERE Name LIKE '%?%'";
 return $q.when($sqliteService.executeSql(query, ['Juan']));
 ```
 
-###**Note**: If you don't want to use SQLite, you must perform the following steps:
+### **Note**: If you don't want to use SQLite, you must perform the following steps:
 1. Remove **`./www/pre.db`** file.
 2. Remove **`./app/js/queries.js`** file.
 3. Remove **`./app/js/services/sqlite.js`** file.
@@ -127,7 +127,7 @@ return $q.when($sqliteService.executeSql(query, ['Juan']));
 $sqliteService.preloadDataBase(true);
 ```
 
-#Ionic Tips
+# Ionic Tips
 * Ionic View LifeCycle: More **[here](http://www.gajotres.net/understanding-ionic-view-lifecycle/)**
 ```javascript
 $scope.$on('$ionicView.beforeEnter', function(){
@@ -205,7 +205,7 @@ ionic.Platform.ready(function(){
 });
 ```
 
-###**Global configuration**:
+### **Global configuration**:
 * Enable the native scrolling (Enable or Disable jsScrolling):
 ```javascript
 $ionicConfigProvider.scrolling.jsScrolling(false);
@@ -254,7 +254,7 @@ ionic.Gestures.gestures.Hold.defaults.hold_threshold = 20;
   });
   ```
 
-#Crosswalk
+# Crosswalk
 Improve the performance of your HTML, CSS, and JavaScript if is required.
 
 Command | Action
@@ -266,13 +266,13 @@ Command | Action
 `ionic browser add crosswalk-lite` | Install the Crosswalk lite version
 `ionic browser revert android` | Remove any custom browser that was installed for the platform by replacing it with the system default browser
 
-#npm commands
+# npm commands
 Command | Action
 ------- | ------
 `npm i ionic cordova bower gulp -g` | Install Ionic, Cordova, Bower and Gulp packages globally 
 `npm cache clean` | Remove the cache to force update the packages. Useful to solve npm issues using the CLI.
 
-#Ionic commands
+# Ionic commands
 
 Command         | Action
 -------------   | -------------
@@ -286,7 +286,7 @@ Command         | Action
 `ionic resources --splash` | Generate only the splash screens. `splash.png`, `splash.psd` or `splash.ai` is located in `./resources/` directory
 `ionic resources ios --icon` | Generate icons per platform
 
-#Cordova commands
+# Cordova commands
 
 Command         | Action
 --------------- | -----------
@@ -297,7 +297,7 @@ cordova plugin list | See the plugins that you're using. Find more **[here!](htt
 cordova plugin rm `plugin_name` --save | Remove a plugin
 cordova build windows -- --appx=8.1-win --archs="x86" | Build the app to Windows (Open the Solution `platforms/windows/*.sln` on **[Visual Studio](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)**)
 
-#Tools
+# Tools
 
 Name            | Description
 --------------- | -----------
@@ -305,7 +305,7 @@ Name            | Description
 **[GapDebug](https://www.genuitec.com/products/gapdebug/)** | Only debug in the device
 **[GenyMotion](https://www.genymotion.com/)** | Better Android Emulation
 
-#Visual Studio Code commands and shortcuts
+# Visual Studio Code commands and shortcuts
 Command/Shortcut        | Action
 --------------- | --------------
 `code .` | Open the editor from CLI
@@ -314,14 +314,14 @@ Command/Shortcut        | Action
 `Ctrl + }` | Toogle comment code
 `Ctrl + ñ` | Open the Integrated Terminal
 
-#Sign to Android (Commands)
+# Sign to Android (Commands)
 
 1. `cordova build --release android`
 2. `keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000`
 3. `jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore HelloWorld-release-unsigned.apk alias_name`
 4. `zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk`
 
-#Links
+# Links
 
 * **[Market place](http://market.ionic.io/)**
 * **[Facebook group](https://www.facebook.com/groups/phonegapcordova/)**
