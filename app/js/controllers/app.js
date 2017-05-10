@@ -11,33 +11,39 @@
         $scope.items = [
             {
                 color: "#E47500",
-                icon: "ion-ionic",
-                title: "Hello Ionic"
+                icon: "ion-android-contact",
+                title: "ME!",
+                view: "templates/me.html"
             },
             {
                 color: "#5AD863",
-                icon: "ion-social-html5",
-                title: "HTML5"
+                icon: "ion-home",
+                title: "My Home",
+                view: "templates/myhome.html"
             },
             {
                 color: "#F8E548",
-                icon: "ion-social-javascript",
-                title: "JS"
+                icon: "ion-ios-paw",
+                title: "My Pets",
+                view: "templates/pets.html"
             },
             {
                 color: "#AD5CE9",
-                icon: "ion-social-sass",
-                title: "Sass"
+                icon: "ion-ios-people",
+                title: "My Friends",
+                view: "templates/friends.html"
             },
             {
                 color: "#3DBEC9",
-                icon: "ion-social-css3",
-                title: "CSS3"
+                icon: "ion-heart",
+                title: "What I Love",
+                view: "templates/love.html"
             },
             {
                 color: "#D86B67",
-                icon: "ion-social-angular",
-                title: "Angular"
+                icon: "ion-planet",
+                title: "Coder Dojo",
+                view: "templates/dojo.html"
             }
         ];
 

@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'App' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
+angular.module('App', ['ionic', 'ngCordova', 'ngAnimate', 'ngMap'])
 
 .run(['$ionicPlatform', 
 			'$sqliteService',
@@ -38,6 +38,7 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
     
     $ionicConfigProvider.scrolling.jsScrolling(ionic.Platform.isIOS());
     
+    
     $stateProvider
         .state('home', {
             url: "/home",
@@ -64,7 +65,8 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
             url: "/item/{title}",
             params: {
                 color: null,
-                icon: null
+                icon: null,
+                view: null
             },
             cache: false,
             views: {
@@ -74,6 +76,7 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
                 }
             }
         });
+    
         
     $urlRouterProvider.otherwise(function ($injector, $location) {
         var $state = $injector.get("$state");

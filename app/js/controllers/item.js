@@ -11,9 +11,10 @@
         $scope.item = {
             title: $stateParams.title,
             icon: $stateParams.icon,
-            color: $stateParams.color
+            color: $stateParams.color,
+            view: $stateParams.view
         };
-        
+        console.log($stateParams.view);
         if (!$scope.item.color) {
             $ionicViewSwitcher.nextDirection('back');
             $ionicHistory.nextViewOptions({
