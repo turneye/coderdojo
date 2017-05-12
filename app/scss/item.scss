@@ -3,3 +3,21 @@
         animation-delay: 0.2s;
     }
 }
+
+.item {
+    background-color: transparent;
+    border: 0;
+}
+
+.profile {
+    background-color: white;
+    border-radius: 250px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    padding-top: 25px;
+}
+.profile img {
+    width: 200px;
+    height: 200px;
+}
